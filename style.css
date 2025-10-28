@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+    transition: 0.3s;
+}
+
+.input-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+input {
+    padding: 0.8rem 1rem;
+    width: 80%;
+    border: 2px solid #0072ff;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #00c6ff;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
+}
+
+button {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.hidden {
+    display: none;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#weatherIcon {
+    font-size: 3rem;
+    animation: float 2s infinite ease-in-out alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-8px);
+    }
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: #222;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.advice-box {
+    background: linear-gradient(135deg, #b8ffda, #e3ffe7);
+    border-left: 6px solid #00b300;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    margin-top: 2rem;
+}
+
+footer {
+    margin-top: auto;
+    background: #003366;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+}

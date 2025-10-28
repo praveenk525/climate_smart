@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌾 Climate-Smart Farming Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>🌾 Climate-Smart Farming Dashboard</h1>
+        <p>Plan your crops smartly using real-time weather insights</p>
+    </header>
+
+    <main class="container">
+        <section class="input-section">
+            <div class="input-card">
+                <label for="location">📍 Enter City or Village:</label>
+                <input id="location" type="text" placeholder="e.g., Chennai, Delhi, Tokyo" />
+                <button id="getWeather">Get Weather</button>
+            </div>
+        </section>
+
+        <section id="weatherResult" class="hidden">
+            <div class="weather-header">
+                <h2 id="placeName"></h2>
+                <div id="weatherIcon"></div>
+            </div>
+
+            <div class="weather-info">
+                <div class="info-card">
+                    🌡️ <strong>Max Temp:</strong> <span id="maxTemp"></span>
+                </div>
+                <div class="info-card">
+                    🧊 <strong>Min Temp:</strong> <span id="minTemp"></span>
+                </div>
+                <div class="info-card">
+                    💧 <strong>Rain:</strong> <span id="rain"></span>
+                </div>
+                <div class="info-card">
+                    🌬️ <strong>Wind:</strong> <span id="wind"></span>
+                </div>
+            </div>
+
+            <div class="advice-box">
+                <h3>🌿 Farming Advice</h3>
+                <p id="adviceText"></p>
+            </div>
+
+            <canvas id="forecastChart"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Developed for Smart Agriculture | © 2025 Climate-Smart Farming</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
